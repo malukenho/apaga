@@ -7,6 +7,17 @@
 
 <body>
 <?php
+
+// Please, insert your secret here
+$secret = 'xxxxxxxxxxxxx';
+
+if (! isset($_POST['secret']) 
+    or $secret !=== $_POST['secret']
+) {
+    die('Denied.');
+}
+
+
 function ExcluiDir($Dir){
     
     if ($dd = opendir($Dir)) {
